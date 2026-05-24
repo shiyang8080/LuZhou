@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: 'Noto Serif SC', serif;
+				background-color: #f8f9fa;
+				color: #343a40;
+				line-height: 1.6;
+			}
+
+			.header {
+				text-align: center;
+				padding: 4rem 2rem;
+				background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+				color: white;
+				margin-bottom: 3rem;
+			}
+
+			.header h1 {
+				font-family: 'Playfair Display', serif;
+				font-size: 3rem;
+				margin-bottom: 1rem;
+				font-weight: 700;
+			}
+
+			.header p {
+				font-size: 1.2rem;
+				max-width: 800px;
+				margin: 0 auto;
+				opacity: 0.9;
+			}
+
+			.destinations-container {
+				max-width: 1400px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
+
+			.destination-card {
+				display: flex;
+				height: 600px;
+				margin-bottom: 4rem;
+				background: white;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.destination-card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+			}
+
+			.destination-card:nth-child(even) {
+				flex-direction: row-reverse;
+			}
+
+			.destination-image {
+				flex: 1;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.destination-image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: transform 0.5s ease;
+			}
+
+			.destination-card:hover .destination-image img {
+				transform: scale(1.05);
+			}
+
+			.image-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(135deg, rgba(30, 60, 114, 0.2) 0%, rgba(42, 82, 152, 0.4) 100%);
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+
+			.destination-card:hover .image-overlay {
+				opacity: 1;
+			}
+
+			.destination-info {
+				flex: 1;
+				padding: 3rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.destination-tag {
+				display: inline-block;
+				background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+				color: white;
+				padding: 0.3rem 1rem;
+				border-radius: 20px;
+				font-size: 0.8rem;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				margin-bottom: 1.5rem;
+			}
+
+			.destination-title {
+				font-family: 'Playfair Display', serif;
+				font-size: 2.5rem;
+				margin-bottom: 1.5rem;
+				color: #2c3e50;
+			}
+
+			.destination-location {
+				display: flex;
+				align-items: center;
+				margin-bottom: 1.5rem;
+				color: #7f8c8d;
+				font-size: 0.9rem;
+			}
+
+			.destination-location i {
+				margin-right: 0.5rem;
+			}
+
+			.destination-description {
+				margin-bottom: 2rem;
+				color: #57606f;
+				line-height: 1.8;
+			}
+
+			.learn-more {
+				display: inline-block;
+				align-self: flex-start;
+				padding: 0.8rem 1.5rem;
+				background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+				color: white;
+				text-decoration: none;
+				border-radius: 30px;
+				font-weight: 500;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.learn-more:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 10px 20px rgba(30, 60, 114, 0.3);
+			}
+
+			.footer {
+				text-align: center;
+				padding: 3rem 2rem;
+				background-color: #2c3e50;
+				color: white;
+				margin-top: 4rem;
+			}
+
+			@media (max-width: 768px) {
+
+				.destination-card,
+				.destination-card:nth-child(even) {
+					flex-direction: column;
+					height: auto;
+				}
+
+				.destination-image,
+				.destination-info {
+					flex: auto;
+				}
+
+				.destination-image {
+					height: 400px;
+				}
+
+				.header h1 {
+					font-size: 2.5rem;
+				}
+			}

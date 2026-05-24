@@ -1,0 +1,150 @@
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Microsoft YaHei", sans-serif;
+			}
+
+			body {
+				background-color: #f9f3e9;
+				color: #333;
+				line-height: 1.6;
+				background: linear-gradient(120deg, #f9f3e9, #fff5e6);
+				/* 添加渐变背景 */
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+
+			header {
+				text-align: center;
+				margin-bottom: 30px;
+				padding: 20px 0;
+				background: linear-gradient(135deg, #8b0000, #b30000);
+				/* 优化背景渐变 */
+				color: white;
+				border-radius: 12px;
+				box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+				/* 添加阴影效果 */
+				animation: fadeInDown 0.8s ease;
+				/* 添加动画效果 */
+			}
+
+			@keyframes fadeInDown {
+				from {
+					opacity: 0;
+					transform: translateY(-20px);
+				}
+
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			h1 {
+				font-size: 2.8em;
+				margin-bottom: 10px;
+				letter-spacing: 1px;
+				/* 添加字母间距 */
+			}
+
+			.subtitle {
+				font-size: 1.3em;
+				opacity: 0.9;
+			}
+
+			.projects {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+				gap: 25px;
+				margin-bottom: 40px;
+			}
+
+			.project-card {
+				background-color: white;
+				border-radius: 12px;
+				overflow: hidden;
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+				transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+				/* 优化过渡效果 */
+				border: 1px solid rgba(139, 0, 0, 0.1);
+				/* 添加边框 */
+			}
+
+			.project-card:hover {
+				transform: translateY(-8px) rotate(1deg);
+				/* 优化悬停效果 */
+				box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+				border-color: #8b0000;
+				/* 悬停时边框变色 */
+			}
+
+			.project-image {
+				width: 100%;
+				height: 220px;
+				object-fit: cover;
+				transition: transform 0.5s ease;
+			}
+
+			.project-card:hover .project-image {
+				transform: scale(1.05);
+			}
+
+			.project-info {
+				padding: 22px;
+			}
+
+			.project-info h3 {
+				margin-bottom: 12px;
+				color: #8b0000;
+				font-size: 1.4em;
+			}
+
+			.video-section {
+				background: linear-gradient(135deg, white, #fff9f0);
+				border-radius: 12px;
+				padding: 25px;
+				margin-top: 30px;
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+				border: 1px solid rgba(139, 0, 0, 0.1);
+			}
+
+			.video-section h2 {
+				text-align: center;
+				margin-bottom: 22px;
+				color: #8b0000;
+				font-size: 2em;
+				letter-spacing: 0.5px;
+			}
+
+			.video-container {
+				position: relative;
+				padding-bottom: 56.25%;
+				height: 0;
+				overflow: hidden;
+				border-radius: 8px;
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+			}
+
+			.video-container video {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: none;
+				border-radius: 8px;
+			}
+
+			footer {
+				text-align: center;
+				margin-top: 40px;
+				padding: 22px;
+				color: #666;
+				font-size: 1em;
+				border-top: 1px solid rgba(139, 0, 0, 0.1);
+			}
